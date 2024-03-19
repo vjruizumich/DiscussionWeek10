@@ -1,0 +1,302 @@
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.text {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* images */
+img {
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+source {
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+video {
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.main-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* font styles */
+a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* margin-left: 100px; */
+}
+
+h3 + a {
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 10px;
+    background-color: rgb(28, 28, 28);
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: lightgrey;
+    border: lightgray 5px solid;
+    border-radius: 100px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.homeText > p {
+    margin-top: 10px;
+}
+
+ul {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ol {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pets-container {
+    margin: auto;
+    margin-top: 5%;
+    width: 50%;
+}
+
+.pets-h3 {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.pets-ul {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* hide skip to main */
+.skip-main {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-main:focus {
+    position: static;
+    width: auto;
+    width: auto;
+}
+
+/* allows background color to fill entire screen */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation style */
+.sideMenu {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#mySideMenu ul {
+    padding: 0;
+}
+
+#mySideMenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#mySideMenu li a:hover {
+    color: aqua;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+#mySideMenu a:hover {
+    color: aqua;
+}
+
+.sideMenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+[id^="myBtn"] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    border: lightgray 5px solid;
+    margin-left: 9%;
+    border-radius: 100px;
+}
+
+[id^=myBtn]:hover {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    border: black 5px solid;
+    margin-left: 9%;
+    border-radius: 100px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* [id^="dots"] {
+    display: none;
+} */
+
+[id^="more"] {
+    display: none;
+}
+
+.more-hidden {
+    display: none;
+}
+
+/* tablet styling */
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 10px;
+        margin-bottom: 75px;
+    }
+    
+    .grid-item {
+        position: relative;
+    }
+    
+    .text {
+        position: relative;
+    }
+
+    h2 {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    .travelText {
+        font-size: medium;
+    }
+
+    h3 {
+        margin: 10px 20px;
+        padding: 10px;
+        background-color: lightgrey;
+        border: lightgray 5px solid;
+        border-radius: 100px;
+        text-align: center;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    h3 + p {
+        text-align: center;
+    }
+
+    .main-image {
+        max-width: 100%;
+        width: 100%;
+        height: 500px;
+    }
+
+    .grid-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));        
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
+    
+    .grid-item {
+        position: relative;
+    }
+
+    .main-image {
+        max-width: 100%;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* disable motion for users with reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    img[src$=".gif"] {
+        display: none !important;
+    }
+
+}
